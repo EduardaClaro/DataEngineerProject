@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+
+# Environments
+.env
+venv/
+
+# Airflow
+logs/
+airflow.db
+
+# Spark
+metastore_db/
+derby.log
+
+# macOS
+.DS_Store
