@@ -38,8 +38,7 @@ def extract_products(api_url, output_path, limit=100): # define a funcao com par
 
 if __name__ == "__main__": 
     API_URL = os.getenv("API_URL", "https://dummyjson.com") # puxa a url da api do ambiente
-    EXECUTION_DATE = os.getenv("EXECUTION_DATE", datetime.now().strftime('%Y-%m-%d')) # puxa a data de execucao
-    OUTPUT_PATH = os.getenv("OUTPUT_PATH", f"/opt/airflow/data/raw/products_{EXECUTION_DATE}.json") # puxa o caminho de saida do ambiente
+    OUTPUT_PATH = os.getenv("OUTPUT_PATH", "/opt/airflow/data/raw/products.json") # puxa o caminho de saida do ambiente
     
     extract_products(API_URL, OUTPUT_PATH) # chama a funcao para extrair os produtos e salvar o json
 
