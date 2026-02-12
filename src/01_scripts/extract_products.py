@@ -9,13 +9,12 @@ logging.basicConfig(level=logging.INFO) # logging para informar o progresso
 logger = logging.getLogger(__name__) # logger para a configuracao atual
 
 # Criando a funcao principal para extrair os dados
-def extract_products(api_url, output_path, limit=100): # define a funcao com paramentros
+def extract_products(api_url, output_path): # define a funcao com paramentros
 # api_url: puxa a url da api
 # output_path: caminho onde o json sera salvo
-# limit: numero maximo de produtos a serem extraidos
     """Extrai produtos da API e salva em JSON"""
     
-    url = f"{api_url}/products?limit={limit}" # construcao da url completa
+    url = f"{api_url}/products" # construcao da url completa
     logger.info(f"Extraindo dados de: {url}") # log da url de onde os dados serao extraidos
     
     response = requests.get(url, timeout=30) # faz a requisicao HTTP
